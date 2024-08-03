@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Companies.Contracts", "Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Companies.Services", "Domain\Companies.Services\Companies.Services.csproj", "{0079B797-61B6-4F3B-9BC7-F8465D8C7F03}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{1AC001DA-38C7-476E-8B90-395DDE9A4F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Companies.Host", "Host\Companies.Host\Companies.Host.csproj", "{2838D074-717A-405D-BAC0-FD03D3A4016D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{0079B797-61B6-4F3B-9BC7-F8465D8C7F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0079B797-61B6-4F3B-9BC7-F8465D8C7F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0079B797-61B6-4F3B-9BC7-F8465D8C7F03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2838D074-717A-405D-BAC0-FD03D3A4016D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2838D074-717A-405D-BAC0-FD03D3A4016D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2838D074-717A-405D-BAC0-FD03D3A4016D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2838D074-717A-405D-BAC0-FD03D3A4016D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{13134AB2-99A2-4613-8F78-166BB1664BBF} = {7560F335-88ED-4F94-8FBD-0A4BE7FA4321}
 		{8C8FC3C7-219E-447B-A893-8CEF82B2519B} = {9C02A0FA-AA5A-4215-84F5-E168E9581F16}
 		{0079B797-61B6-4F3B-9BC7-F8465D8C7F03} = {9C02A0FA-AA5A-4215-84F5-E168E9581F16}
+		{2838D074-717A-405D-BAC0-FD03D3A4016D} = {1AC001DA-38C7-476E-8B90-395DDE9A4F92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C961A8D-F0C8-4B16-BD5D-BE526856687C}

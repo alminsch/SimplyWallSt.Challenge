@@ -1,4 +1,5 @@
 using Companies.Contracts;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Companies.Api.Controllers;
