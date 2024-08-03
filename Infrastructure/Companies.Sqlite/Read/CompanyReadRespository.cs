@@ -9,6 +9,6 @@ public class CompanyReadRespository : ICompanyReadRepository
     {
         await Task.Delay(10);
 
-        return new[] {new CompanyModel("Test")}.ToList();
+        return new[] {new CompanyModel("Hello World")}.ToList();
     }
 }

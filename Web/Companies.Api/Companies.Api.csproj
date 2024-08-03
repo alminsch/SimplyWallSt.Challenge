@@ -6,8 +6,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\Companies.Contracts\Companies.Contracts.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Companies.Sqlite\Companies.Sqlite.csproj" />
+    <ProjectReference Include="..\..\Domain\Companies.Services\Companies.Services.csproj" />
   </ItemGroup>
 </Project>
