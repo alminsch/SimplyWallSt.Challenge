@@ -1,3 +1,3 @@
 ﻿namespace Companies.Contracts;
 
-public record SharePriceModel(Guid Id, DateOnly Date, decimal Price);
+public record SharePriceModel(Guid CompanyId, DateOnly Date, decimal Price);

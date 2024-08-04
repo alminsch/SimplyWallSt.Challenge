@@ -2,7 +2,7 @@
 
 public class SharePrice
 {
-    public DateOnly Date;
+    public DateOnly Date { get; set; }
 
-    public decimal Price;
+    public decimal Price { get; set; }
 }

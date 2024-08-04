@@ -10,10 +10,10 @@ internal class CompanyService(ICompanyReadService companyReadService, ISharePric
         var companies = await companyReadService.GetCompaniesAsync(cancellationToken);
 
         var sharePrices = loadSharePrices
-        ? await sharePriceReadService.GetSharePricesAsync(companies.Select(c => c.Id).ToHashSet())
+        ? await sharePriceReadService.GetSharePricesAsync(companies.Select(c => c.Id).ToHashSet(), cancellationToken)
         : null;
 
-        var sharePricesByCompanies = companies.ToDictionary(c => c, c => sharePrices?.Where(sp => sp.Id == c.Id).ToList());
+        var sharePricesByCompanies = companies.ToDictionary(c => c, c => sharePrices?.Where(sp => sp.CompanyId == c.Id).ToList());
 
         return sharePricesByCompanies.Select(CreateCompanyDetailModel).ToList();
     }

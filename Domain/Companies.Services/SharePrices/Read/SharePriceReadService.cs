@@ -2,10 +2,10 @@
 
 namespace Companies.Services.SharePrices.Read;
 
-internal class SharePriceReadService : ISharePriceReadService
+internal class SharePriceReadService(ISharePriceReadRepository sharePriceReadRepository) : ISharePriceReadService
 {
-    public Task<IReadOnlyList<SharePriceModel>> GetSharePricesAsync(IReadOnlySet<Guid> companyIds)
+    public async Task<IReadOnlyList<SharePriceModel>> GetSharePricesAsync(IReadOnlySet<Guid> companyIds, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        return await sharePriceReadRepository.GetSharePricesAsync(companyIds, cancellationToken);
     }
 }
