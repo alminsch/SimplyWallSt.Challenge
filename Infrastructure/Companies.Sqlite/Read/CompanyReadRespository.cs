@@ -1,14 +1,14 @@
 ﻿using Companies.Contracts;
-using Companies.Services;
+using Companies.Services.Companies.Read;
 using Microsoft.Data.Sqlite;
 
-namespace Companies.Sqlite;
+namespace Companies.Sqlite.Read;
 
-public class CompanyReadRespository : ICompanyReadRepository
+internal class CompanyReadRepository : ICompanyReadRepository
 {
     public async Task<IReadOnlyList<CompanyModel>> GetCompaniesAsync(CancellationToken cancellationToken)
     {
-        var companyNames = new List<string>();
+        var companies = new List<CompanyModel>();
 
         using (var connection = new SqliteConnection("Data Source=Resources/sws.sqlite3"))
         {
@@ -16,19 +16,22 @@ public class CompanyReadRespository : ICompanyReadRepository
 
             var command = connection.CreateCommand();
 
-            command.CommandText = "SELECT name FROM swsCompany";
+            command.CommandText = "SELECT c.id, c.name, c.unique_symbol, s.total FROM swsCompany c JOIN swsCompanyScore s on c.id = s.company_id";
 
             using (var reader = await command.ExecuteReaderAsync(cancellationToken))
             {
                 while (await reader.ReadAsync(cancellationToken))
                 {
-                    var name = reader.GetString(0);
+                    var id = reader.GetString(0);
+                    var name = reader.GetString(1);
+                    var symbolCode = reader.GetString(2);
+                    var score = reader.GetInt32(3);
 
-                    companyNames.Add(name);
+                    companies.Add(new CompanyModel(Id: Guid.Parse(id), Name: name, SymbolCode: symbolCode, Score: score));
                 }
             }
         }
 
-        return companyNames.Select(c => new CompanyModel(c)).ToList();
+        return companies;
     }
 }

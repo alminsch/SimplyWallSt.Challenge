@@ -1,5 +1,5 @@
-using Companies.Services;
-using Companies.Sqlite;
+using Companies.Services.DependencyInjection;
+using Companies.Sqlite.DependencyInjection;
 
 internal class Program
 {

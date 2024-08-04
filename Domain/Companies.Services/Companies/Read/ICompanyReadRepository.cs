@@ -1,6 +1,6 @@
 ﻿using Companies.Contracts;
 
-namespace Companies.Services;
+namespace Companies.Services.Companies.Read;
 
 public interface ICompanyReadRepository
 {

@@ -1,8 +1,8 @@
 ﻿using Companies.Contracts;
 
-namespace Companies.Services;
+namespace Companies.Services.Companies.Read;
 
-public class CompanyReadService(ICompanyReadRepository companyReadRepository) : ICompanyReadService
+internal class CompanyReadService(ICompanyReadRepository companyReadRepository) : ICompanyReadService
 {
     public async Task<IReadOnlyList<CompanyModel>> GetCompaniesAsync(CancellationToken cancellationToken)
     {
