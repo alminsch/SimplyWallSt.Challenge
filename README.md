@@ -12,12 +12,14 @@ To run the solution navigate to the Companies.Host folder and run the command
 You might once need to run the following command as well
 > `dotnet dev-certs https --trust`
 
-You should see an output similar to **"Now listening on: https://localhost:XXXX"**
+You should see an output similar to *"Now listening on: https://localhost:XXXX"*
 
-To test the api you can use the swagger interface at **https://localhost:XXXX/swagger/index.html**
+To test the api you can use the swagger interface at *https://localhost:XXXX/swagger/index.html*
 
 
-Looking forward to hearing your feedback.
+
+Looking forward to hearing your feedback!
 
 Thanks,
+
 Alex
