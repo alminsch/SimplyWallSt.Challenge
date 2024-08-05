@@ -17,9 +17,7 @@ You should see an output similar to *"Now listening on: https://localhost:XXXX"*
 To test the api you can use the swagger interface at *https://localhost:XXXX/swagger/index.html*
 
 
-
 Looking forward to hearing your feedback!
 
-Thanks,
-
+Thanks,  
 Alex
