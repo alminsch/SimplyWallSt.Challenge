@@ -35,9 +35,4 @@ internal class SharePriceReadRepository : ISharePriceReadRepository
 
         return sharePrices;
     }
-
-    private static string GetCompanyIdString(IReadOnlySet<Guid> companyIds) 
-    {
-       return '\"' + string.Join("\",\"", companyIds.Select(g => g.ToString().ToUpper())) + '\"';
-    }
 }

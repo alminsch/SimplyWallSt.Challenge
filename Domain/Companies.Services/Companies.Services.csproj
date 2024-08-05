@@ -5,6 +5,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <InternalsVisibleTo Include="Companies.Tests" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Companies.Contracts\Companies.Contracts.csproj" />
   </ItemGroup>
   <ItemGroup>
